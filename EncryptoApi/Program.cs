@@ -1,3 +1,5 @@
+using EncryptionLibrary;
+
 namespace EncryptoApi
 {
     public class Program
@@ -7,9 +9,22 @@ namespace EncryptoApi
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
-
+            app.MapGet("/", () => "Welcome to Encryption!");
+            app.MapGet("/encrypt", (string input) => Encrypt(input));
             app.Run();
+
+
+            string Encrypt(string input)
+            {
+                Encryption encrypt = new Encryption();
+
+                string encrypted = encrypt.Encrypt(input);
+
+                return $"Encrypt:  {encrypted}  ";
+            }
+
+            ///encrypt?input=Hejsan Robert
         }
+        
     }
 }
