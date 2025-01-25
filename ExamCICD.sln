@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptoApi", "EncryptoApi\EncryptoApi.csproj", "{927F0589-736D-4409-B747-52D820F274E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionLibrary", "EncryptionLibrary\EncryptionLibrary.csproj", "{5AD50373-9D89-4623-9BFF-9B702A40F04A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionTests", "EncryptionTests\EncryptionTests.csproj", "{0A18570A-8251-4CCA-9553-D9B4D16868F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4124401C-3E82-4728-B055-E4E06036B127}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-cd-pineline.yml = .github\workflows\ci-cd-pineline.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
