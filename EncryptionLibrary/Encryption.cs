@@ -8,10 +8,10 @@ namespace EncryptionLibrary
 {
     public class Encryption
     {
-        public string Encrypt(string input)
+
+        public string Encrypt(string input,int shift )
         {
-            string result = "";
-            int shift = 3;
+            string result = "";           
 
             foreach (char letter in input)
             {
@@ -38,7 +38,7 @@ namespace EncryptionLibrary
                 }
                 else
                 {
-                    // ÄÅÖ?
+                    // ÄÅÖ?   !"#¤%&())=  ?? kolla senare
                     result += letter;
                 }
 
@@ -46,9 +46,9 @@ namespace EncryptionLibrary
             return result;
         }
 
-        public static string Decrypt(string input)
+        public string Decrypt(string input, int shift)
         {
-            return input;
+           return Encrypt(input, -shift);
         }
     }
 }
