@@ -9,7 +9,11 @@ namespace EncryptoApi
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.MapGet("/", () => "Welcome to Encryption!");
+            //Visuellt
+            app.MapGet("/", () => "Welcome to Encryption!\n" +
+            "/encrypt?input= \n" +
+            "/decrypt?input=  ");
+
             app.MapGet("/encrypt", (string input) => Encrypt(input));
             app.MapGet("/decrypt", (string input) => Decrypt(input));
             app.Run();

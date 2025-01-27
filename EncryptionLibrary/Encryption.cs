@@ -20,6 +20,7 @@ namespace EncryptionLibrary
                     // Små Bokstav skifta
                     if (char.IsLower(letter))
                     {
+                        // a = 97 ASCII värdet
                         char shifted = (char)((letter - 'a' + shift) % 26 + 'a');
                         result += shifted;
                     }
@@ -38,7 +39,7 @@ namespace EncryptionLibrary
                 }
                 else
                 {
-                    // ÄÅÖ?   !"#¤%&())=  ?? kolla senare
+                    // ?!"#¤%&())= Tecken
                     result += letter;
                 }
 
