@@ -28,5 +28,22 @@ jobs:
           dotnet restore
           dotnet build --configuration Release
 
-    # - name: Run tests
-    #   run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
+    - name: Run tests
+      run: dotnet test --verbosity normal
+
+    - name: Publish project
+      run: dotnet publish ./EncryptoApi/EncryptoApi.csproj --configuration Release --output ./publish
+
+    - name: Create zip package
+      run: cd publish; zip ../site.zip *;
+
+    - name: Deploy to AWS EB
+      uses: einaregilsson/beanstalk-deploy@v21
+      with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: Chiffer API
+          environment_name: ChifferAPI-env
+          version_label: ${{ github.run_id }}
+          region: eu-north-1
+          deployment_package: site.zip
