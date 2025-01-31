@@ -13,12 +13,12 @@ Ett enkelt API för att kryptera och dekryptera text med hjälp av en enkel Ceas
 - **Beskrivning**: Startpunkt som ger en översikt över tillgängliga endpoints.
 
 ### GET `/encrypt`
-- **Query Parameters**:
+**Query Parameters**:
 - `input` (string): Texten som ska krypteras.
 - **Exempel**: `/encrypt?input=hello`
 
 ### GET `/decrypt`
-- **Query Parameters**:
+**Query Parameters**:
 - `input` (string): Texten som ska dekrypteras.
 - **Exempel**: `/decrypt?input=khoor`
 
