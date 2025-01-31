@@ -1,11 +1,13 @@
 # Encryption API
 Ett enkelt API för att kryptera och dekryptera text med hjälp av en enkel Ceaser cipher
 
+[![Build and push to aws](https://github.com/RobertTVu/ExamCICD/actions/workflows/ci-cd-pineline.yml/badge.svg)](https://github.com/RobertTVu/ExamCICD/actions/workflows/ci-cd-pineline.yml)
+
 ## Funktioner
 - **Encrypt**: Krypterar en given text.
 - **Decrypt**: Dekrypterar en given text.
 
-### Endpoints
+## Endpoints
 
 ### GET `/`
 - **Beskrivning**: Startpunkt som ger en översikt över tillgängliga endpoints.
